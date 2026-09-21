@@ -22,7 +22,7 @@ configuration:
     colors:
       lightMode:
         light: "#faf8f8"
-        lightgray: "#e5e5e5"
+        lightgray: "#f4422f"
         gray: "#b8b8b8"
         darkgray: "#4e4e4e"
         dark: "#2b2b2b"
@@ -32,17 +32,17 @@ configuration:
         textHighlight: "#fff23688"
       darkMode:
         light: "#161618"
-        lightgray: "#393639"
+        lightgray: "#951a28"
         gray: "#f87d70"
         darkgray: "#d4d4d4"
         dark: "#ebebec"
         secondary: "##f66151"
         tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        highlight: "#951a28"
         textHighlight: "#b3aa0288"
 plugins:
   - source: "@quartz-community/created-modified-date"
-    enabled: true
+    enabled: false
     options:
       defaultDateType: modified
       priority:
@@ -100,6 +100,8 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options: 
+      interface: Roboto
   - source: "@quartz-themes/core"
     enabled: false
     options:
@@ -137,6 +139,11 @@ plugins:
     enabled: true
   - source: "@quartz-community/og-image"
     enabled: true
+    options:
+      colorScheme: lightMode # "lightMode" or "darkMode"
+      width: 1200
+      height: 630
+      excludeRoot: false
   - source: "@quartz-community/cname"
     enabled: true
   - source: "@quartz-community/canvas-page"
@@ -145,6 +152,8 @@ plugins:
     enabled: true
   - source: "@quartz-community/folder-page"
     enabled: true
+    options:
+      showFolderCount: false
   - source: "@quartz-community/tag-page"
     enabled: true
   - source: "@quartz-community/explorer"
@@ -152,8 +161,10 @@ plugins:
     layout:
       position: left
       priority: 50
+    options:
+      title: Content
   - source: "@quartz-community/graph"
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
@@ -176,7 +187,7 @@ plugins:
       position: beforeBody
       priority: 10
   - source: "@quartz-community/content-meta"
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 20
@@ -221,7 +232,6 @@ plugins:
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
     layout:
       position: footer
       priority: 50

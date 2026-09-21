@@ -1,4 +1,10 @@
-## Grundlegende Ideen und Konzepte
+---
+title: 01 🚀 Einführung
+socialDescription: blablöadf
+socialImage: quartz/static/og-image.png
+---
+
+# Game Engines
 Game Engines stellen Funktionen, die man für die Entwicklung von Computerspielen erwarten würde, in Software-Form zur Verfügung. Zu dieser Funktionalität zählen z.B. Physics, Rendering, evtl. eine Script-Sprache, usw. Game Engines ermöglichen, relativ schnell zu Ergebnissen zu kommen. Sie nehmen uns viel Arbeit ab, aber auch die Kontrolle, die man z.B. mit custom Game Engines oder [Frameworks](https://gamefromscratch.com/the-best-game-development-frameworks/) hätte.
 
 ## Beliebte "gratis" Game Engines
@@ -25,9 +31,9 @@ Es gibt *einige* beliebte Game Engines, die (vorerst) ohne Kosten genutzt werden
 * leicht, kompakt & läuft auf älterer Hardware
 * Python-ähnliche Scriptsprache GDScript & C#
 
----
 
-## Godot Engine: Konzepte
+
+# Godot Engine: Konzepte
 
 ### Scene
 Der Begriff *Scene* im Kontext von Godot kann mehrere Konzepte ausdrücken. Eine Scene ist üblicherweise eine Datei (.tscn), in der eine Hierarchie von verschiedenen Objekten (*Nodes*) und Komponenten erstellt werden kann. Diese umfassen Beispielsweise Objekte, die Bilder rendern (z.B. `Sprite2D`), Audio abspielen (`AudioStreamPlayer`) oder Kollisionsabfragen durchführen können (`Area2D`).
@@ -101,5 +107,7 @@ sprite.flip_h = true # flips sprite horizontally
 ># TODO: implement death mechanics
 >```
 
+---
 
+Weiter mit [🐕 Desktop Pet!](02DesktopPet)
 
