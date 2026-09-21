@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Courses
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
-    provider: plausible
+    null
   locale: en-US
   baseUrl: chegusta.github.io/supusite
   ignorePatterns:
@@ -33,10 +33,10 @@ configuration:
       darkMode:
         light: "#161618"
         lightgray: "#393639"
-        gray: "#646464"
+        gray: "#f87d70"
         darkgray: "#d4d4d4"
         dark: "#ebebec"
-        secondary: "#7b97aa"
+        secondary: "##f66151"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"

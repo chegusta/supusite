@@ -1,5 +1,3 @@
-
-
 ## Grundlegende Ideen und Konzepte
 Game Engines stellen Funktionen, die man für die Entwicklung von Computerspielen erwarten würde, in Software-Form zur Verfügung. Zu dieser Funktionalität zählen z.B. Physics, Rendering, evtl. eine Script-Sprache, usw. Game Engines ermöglichen, relativ schnell zu Ergebnissen zu kommen. Sie nehmen uns viel Arbeit ab, aber auch die Kontrolle, die man z.B. mit custom Game Engines oder [Frameworks](https://gamefromscratch.com/the-best-game-development-frameworks/) hätte.
 
