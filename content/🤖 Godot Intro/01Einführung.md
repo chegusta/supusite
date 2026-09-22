@@ -90,8 +90,11 @@ Im ersten Tutorial werden wir manchmal auf Methods oder Properties von Nodes zug
 
 
 ```
-audiostreamplayer.stream = my_stream # assigns stream that is saved in variable to audio player
+audiostreamplayer.stream = my_stream # assigns stream 
+#that is saved in variable to audio player
+
 audiostreamplayer.play() # plays attached stream
+
 sprite.flip_h = true # flips sprite horizontally
 ```
 
@@ -109,5 +112,37 @@ sprite.flip_h = true # flips sprite horizontally
 
 ---
 
-Weiter mit [🐕 Desktop Pet!](02DesktopPet)
+### Signals (Optional)
+Ein weiteres wichtiges Konzept sind `Signals`. Jede Node "dokumentiert", was mit ihr passiert. Z.B. haben `AudioStreamPlayer`s ein Signal namens `finished()`. Sobald der Player das Abspielen der Datei beendet hat, sendet er dieses Signal aus ("Hey, ich bin fertig!"). 
 
+Andere Nodes können so programmiert werden, dass sie auf dieses Signal hören und dann bestimmte Funktionen ausführen. Wir können Signale auch selbst programmieren.
+
+>[!tip]- Illustratives Beispiel
+> Wir programmieren ein Spiel, in dem Spieler:innen einen Hebel betätigen können, um eine Tür zu öffnen. Sobald Spieler:innen den Hebel betätigen, schickt er ein Signal aus ("Wurde betätigt!"). Dieses Signal wurde von uns definiert.
+>
+>Angenommen, unsere Hebel-Scene besteht aus folgender Hierarchie: ![[signal_hierarchy_example.png]] 
+>
+>`Area2D` sorgt dafür, dass über >`CollisionShape2D` erkannt wird, >wenn jemand die Area betritt. Das >Signal `area_entered` von >`Area2D` wird aktiviert. >Daraufhin sendet die Funktion, >die daran gekoppelt ist unser >eigenes Signal namens `activated`.
+>>[!warning]Achtung
+Es folgt kein echter `GDScript-Code, sondern eine vereinfachte Darstellung`
+>```python {5}
+># button script
+>signal activated
+>
+>area_entered():
+>	activated.emit()
+>```
+> Unser Tor-Objekt könnte so programmiert sein, dass es "zuhört", wann dieses Signal gesendet wird.
+>```python
+># door script
+>listen_to(activated).call(open)
+>
+>open():
+># opens door
+
+# Godot Documentation
+[Hier](https://docs.godotengine.org/en/stable/index.html) ist die sehr überschaubare Dokumentation von Godot Engine. Die meisten Funktionen, Signals, usw. können hier gefunden werden.
+
+
+
+#### 👉 Weiter mit [🐕 Desktop Pet!](02DesktopPet)

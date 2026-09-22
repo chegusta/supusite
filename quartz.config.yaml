@@ -32,7 +32,7 @@ configuration:
         textHighlight: "#fff23688"
       darkMode:
         light: "#161618"
-        lightgray: "#951a28"
+        lightgray: "#4D8A85"
         gray: "#f87d70"
         darkgray: "#d4d4d4"
         dark: "#ebebec"
@@ -69,7 +69,7 @@ plugins:
     order: 40
   - source: "@quartz-community/table-of-contents"
     enabled: true
-    order: 50
+    order: 60
     layout:
       position: right
       priority: 30
@@ -166,7 +166,7 @@ plugins:
   - source: "@quartz-community/graph"
     enabled: false
     layout:
-      position: right
+      position: footer
       priority: 10
   - source: "@quartz-community/search"
     enabled: true
@@ -176,6 +176,8 @@ plugins:
       group: toolbar
       groupOptions:
         grow: true
+      options:
+        enablePreview: true
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:

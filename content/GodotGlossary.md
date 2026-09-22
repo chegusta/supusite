@@ -7,3 +7,4 @@ title: 📕 Godot Glossary
 
 ## `Area2D`
 
+## `AudioStreamPlayer`
