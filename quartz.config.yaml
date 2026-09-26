@@ -38,7 +38,7 @@ configuration:
         dark: "#ebebec"
         secondary: "##f66151"
         tertiary: "#84a59d"
-        highlight: "#951a28"
+        highlight: "#6a6518"
         textHighlight: "#b3aa0288"
 plugins:
   - source: "@quartz-community/created-modified-date"
@@ -57,6 +57,7 @@ plugins:
         light: github-light
         dark: github-dark
       keepBackground: false
+      clipboard: false
     order: 20
   - source: "@quartz-community/obsidian-flavored-markdown"
     enabled: true
